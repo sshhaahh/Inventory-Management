@@ -10,7 +10,7 @@ const App = () => {
   const [editOrAdd, setEditOrAdd] = useState("add");
 
   return (
-    <div className='flex flex-col justify-center items-center gap-y-3 bg-[#011627] text-[#FDFFFC] py-4'>
+    <div className='flex flex-col justify-start items-center gap-y-3 bg-[#011627] text-[#FDFFFC] py-4 min-h-screen'>
       <div className='flex text-5xl  p-4 justify-center items-center font-bold font-serif '>
         <h1>Inventory Management</h1>
       </div>
