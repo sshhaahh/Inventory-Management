@@ -1,6 +1,7 @@
 import React from 'react';
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
-const AddItem = ({ setItems, items, setAdd, formData, editOrAdd, setFormData }) => {
+const AddItem = ({ setItems,add, items, setAdd, formData, editOrAdd, setFormData }) => {
 
     
     const handleChange = (e) => {
@@ -35,7 +36,8 @@ const AddItem = ({ setItems, items, setAdd, formData, editOrAdd, setFormData }) 
     };
 
   return (
-    <div className='flex flex-col w-full text-xl text-black p-4 justify-center items-center'>
+    <div className='flex flex-col w-full text-xl text-black p-4 justify-center items-center '>
+        <button className='fixed top-2 text-4xl right-4' onClick={()=>{if(add===true){setAdd(false)}}} ><IoMdCloseCircleOutline /></button>
       <form onSubmit={handleSubmit} className='flex flex-col w-full justify-center items-center gap-4'>
         <input
           className='border px-3 py-2 rounded-2xl w-[80%]'

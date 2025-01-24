@@ -10,8 +10,8 @@ const App = () => {
   const [editOrAdd, setEditOrAdd] = useState("add");
 
   return (
-    <div className='flex flex-col justify-center items-center gap-y-5'>
-      <div className='flex text-5xl m-4 p-4 justify-center items-center font-bold font-serif '>
+    <div className='flex flex-col justify-center items-center gap-y-3 bg-[#011627] text-[#FDFFFC] py-4'>
+      <div className='flex text-5xl  p-4 justify-center items-center font-bold font-serif '>
         <h1>Inventory Management</h1>
       </div>
 
@@ -24,12 +24,13 @@ const App = () => {
             formData={formData} 
             editOrAdd={editOrAdd} 
             setEditOrAdd={setEditOrAdd} 
-            setFormData={setFormData} 
+            setFormData={setFormData}
+            add={add} 
           />
         </div>
       )}
 
-      <div className='flex justify-center w-[80%] border-[0.5px] rounded-2xl'>
+      <div className='flex justify-center w-[80%] border-[0.5px] rounded-2xl bg-[#575761]'  onClick={()=>{if(add===true){setAdd(false)}}}>
         <Items 
           items={items} 
           setAdd={setAdd} 

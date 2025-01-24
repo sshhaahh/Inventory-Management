@@ -41,23 +41,29 @@ const Items = ({ items, setAdd, setItems, setFormData, setEditOrAdd }) => {
 
   return (
     <div className='flex flex-col p-3 justify-center items-center text-lg w-full text-center'>
-      <div className='w-full flex justify-evenly'>
+      <div className='w-full flex justify-end'>
+
+
+
         {/* add button */}
+
+
+
         <button 
           onClick={() => { setAdd(true); setEditOrAdd("add"); }} 
-          className='outline flex justify-center items-center gap-2 text-2xl px-6 rounded-xl font-semibold py-1 hover:bg-gray-400 hover:shadow-lg'>
+          className=' bg-[#8ACB88] flex justify-center items-center gap-2 text-2xl px-6 rounded-xl font-semibold py-1 hover:bg-gray-400 hover:shadow-lg'>
           <IoMdAdd /> Add Item
         </button>
         
 
       </div>
-      <div className='w-full flex justify-start font-bold'>
-          <div className='grid grid-cols-[10%,45%,35%,15%] p-2 w-[85%]'>
-            <p className='border px-5 py-2'>ID</p>
-            <p className='border px-5 py-2'>Name</p>
-            <p className='border px-5 py-2'>Category
+      <div className='w-full flex font-bold'>
+          <div className='grid grid-cols-[10%,45%,35%,15%] p-2 w-[85%] rounded-lg'>
+            <p className=' px-5 py-2'>ID</p>
+            <p className=' px-5 py-2'>Name</p>
+            <p className='px-5 py-2'>Category
 
-                <select className='border text-center p-1 rounded-lg ml-4'
+                <select className='border text-center p-1 rounded-lg ml-4 bg-[#575761]'
                     value={filterCategory}
                     onChange={(e)=>{setFilterCategory(e.target.value)}} 
                 >
@@ -71,18 +77,18 @@ const Items = ({ items, setAdd, setItems, setFormData, setEditOrAdd }) => {
                 </select>
 
             </p>
-            <p className='border px-5 py-2 flex justify-center items-center gap-3'>Quantity <button onClick={sortToggle} > <FaSort /></button> </p>
+            <p className=' px-5 py-2 flex justify-center items-center gap-3'>Quantity <button onClick={sortToggle} > <FaSort /></button> </p>
           </div>
          
         </div>
-        <div className='w-full flex flex-col gap-4'>
+        <div className='w-full flex flex-col gap-4 '>
             {sortItems.map((item, index) => (
-                <div key={index} className={`w-full flex justify-between  ${item.quantity<10?"bg-red-300":""}`}>
+                <div key={index} className={`w-full flex justify-between border rounded-lg ${item.quantity<10?"bg-red-300 text-red-800":"bg-[#648381]"}`}>
                     <div className='grid grid-cols-[10%,45%,35%,10%]  w-[85%]'>
-                        <p className='border px-5 py-2'>{item.id}</p>
-                        <p className='border px-5 py-2'>{item.name}</p>
-                        <p className='border px-5 py-2'>{item.category}</p>
-                        <p className="border px-5 py-2">{item.quantity}</p>
+                        <p className=' px-5 py-2'>{item.id}</p>
+                        <p className=' px-5 py-2'>{item.name}</p>
+                        <p className=' px-5 py-2'>{item.category}</p>
+                        <p className=" px-5 py-2">{item.quantity}</p>
                     </div>
                     <div className='grid grid-cols-2 p-2'>
                         <p className='flex justify-center items-center border px-5 py-2'>
