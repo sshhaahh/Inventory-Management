@@ -58,7 +58,7 @@ const AddItem = ({ setItems,add, items, setAdd, formData, editOrAdd, setFormData
             required
             onChange={handleChange}
         >
-            <option value="All">All</option>
+           
             <option value="Fruit">Fruits</option>
             <option value="Vegetable">Vegetable</option>
             <option value="Dairy">Dairy</option>

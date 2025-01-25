@@ -40,7 +40,7 @@ const Items = ({ items, setAdd, setItems, setFormData, setEditOrAdd }) => {
     }
 
   return (
-    <div className='flex flex-col p-3 justify-center items-center text-lg w-full text-center'>
+    <div className='flex flex-col p-3 justify-center items-center text-xl w-full text-center pb-10'>
       <div className='w-full flex justify-end'>
 
 
